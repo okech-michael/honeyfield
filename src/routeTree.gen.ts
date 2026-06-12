@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WholesaleRouteImport } from './routes/wholesale'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
   '/gallery': typeof GalleryRoute
   '/products': typeof ProductsRoute
   '/wholesale': typeof WholesaleRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
   '/gallery': typeof GalleryRoute
   '/products': typeof ProductsRoute
   '/wholesale': typeof WholesaleRoute
@@ -59,21 +67,30 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
   '/gallery': typeof GalleryRoute
   '/products': typeof ProductsRoute
   '/wholesale': typeof WholesaleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/gallery' | '/products' | '/wholesale'
+  fullPaths: '/' | '/about' | '/blog' | '/gallery' | '/products' | '/wholesale'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/gallery' | '/products' | '/wholesale'
-  id: '__root__' | '/' | '/about' | '/gallery' | '/products' | '/wholesale'
+  to: '/' | '/about' | '/blog' | '/gallery' | '/products' | '/wholesale'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/gallery'
+    | '/products'
+    | '/wholesale'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRoute
   GalleryRoute: typeof GalleryRoute
   ProductsRoute: typeof ProductsRoute
   WholesaleRoute: typeof WholesaleRoute
@@ -102,6 +119,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -122,6 +146,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BlogRoute: BlogRoute,
   GalleryRoute: GalleryRoute,
   ProductsRoute: ProductsRoute,
   WholesaleRoute: WholesaleRoute,
