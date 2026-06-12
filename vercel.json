@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": ".output/server/index.mjs",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": ".output/server/index.mjs"
+    }
+  ],
+  "functions": {
+    ".output/server/index.mjs": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}

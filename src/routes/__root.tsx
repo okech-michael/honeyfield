@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { MobileCallButton } from "../components/site/MobileCallButton";
@@ -40,9 +39,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -87,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers. Wholesale and retail supply." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Honeyfield" },
       { name: "twitter:title", content: "Honeyfield — Premium Honey & Bee Products" },
       { name: "twitter:description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers. Wholesale and retail supply." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/jXxuAlbOgKb58mTy2Xpxws39NgL2/social-images/social-1781258816198-timothy.webp" },
