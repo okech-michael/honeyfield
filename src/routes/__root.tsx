@@ -84,10 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers. Wholesale and retail supply." },
       { name: "author", content: "Honeyfield" },
       { property: "og:title", content: "Honeyfield — Premium Honey & Bee Products" },
-      { property: "og:description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers." },
+      { property: "og:description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers. Wholesale and retail supply." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Honeyfield — Premium Honey & Bee Products" },
+      { name: "twitter:description", content: "Pure natural honey, beeswax, propolis and bee pollen from trusted Kenyan beekeepers. Wholesale and retail supply." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/jXxuAlbOgKb58mTy2Xpxws39NgL2/social-images/social-1781258816198-timothy.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/jXxuAlbOgKb58mTy2Xpxws39NgL2/social-images/social-1781258816198-timothy.webp" },
     ],
     links: [
       {
