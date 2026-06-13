@@ -1,18 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": ".output/server/index.mjs",
-      "use": "@vercel/node"
+  "version": 3,
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs24.x"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/.output/server/index.mjs"
+      "source": "/(.*)",
+      "destination": "/api/index.js"
     }
   ]
 }
