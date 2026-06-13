@@ -9,6 +9,7 @@ import pBeeswax from "@/assets/product-beeswax.jpg";
 import pPropolis from "@/assets/product-propolis.jpg";
 import pPollen from "@/assets/product-pollen.jpg";
 import pGift from "@/assets/product-gift.jpg";
+import pNtarakwai from "@/assets/ntarakwai.jpeg";
 import honeycomb from "@/assets/honeycomb.jpg";
 
 type Cat = "All" | "Honey" | "Hive Products" | "Gifting";
@@ -16,6 +17,7 @@ type Cat = "All" | "Honey" | "Hive Products" | "Gifting";
 const PRODUCTS = [
   { img: pPure, title: "Pure Raw Honey", cat: "Honey" as Cat, desc: "Unprocessed, cold-extracted honey with full enzymatic richness.", benefits: ["Natural energy", "Immunity", "Rich flavour"] },
   { img: pProcessed, title: "Processed Clear Honey", cat: "Honey" as Cat, desc: "Lightly filtered for a smooth, pourable finish — ideal for hospitality.", benefits: ["Consistent texture", "Long shelf life"] },
+  { img: pNtarakwai, title: "Honey", cat: "Honey" as Cat, desc: "Ntarakwai pure honey with a rich, natural flavour and golden clarity.", benefits: ["Pure origin", "Smooth texture", "Delicate aroma"] },
   { img: pBeeswax, title: "Natural Beeswax", cat: "Hive Products" as Cat, desc: "Pure beeswax blocks for cosmetics, candles and artisans.", benefits: ["Cosmetic-grade", "Clean burn"] },
   { img: pPropolis, title: "Propolis Tincture", cat: "Hive Products" as Cat, desc: "Concentrated propolis extract for natural immune support.", benefits: ["Antioxidant", "Wellness tonic"] },
   { img: pPollen, title: "Golden Bee Pollen", cat: "Hive Products" as Cat, desc: "Sun-dried pollen granules — a complete superfood.", benefits: ["Protein-rich", "Vitamins & minerals"] },
