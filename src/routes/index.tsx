@@ -13,9 +13,9 @@ import pPollen from "@/assets/product-pollen.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Honeyfield — Pure Natural Honey From Trusted Beekeepers" },
+      { title: "Ntarakwai pure & Natural Honey — Pure Natural Honey From Trusted Beekeepers" },
       { name: "description", content: "Premium honey, beeswax, propolis and bee pollen harvested naturally in Kenya. Wholesale & retail supply with quality assurance." },
-      { property: "og:title", content: "Honeyfield — Pure Natural Honey" },
+      { property: "og:title", content: "Ntarakwai pure & Natural Honey — Pure Natural Honey" },
       { property: "og:description", content: "Premium honey and bee products from trusted Kenyan beekeepers." },
       { property: "og:image", content: hero },
       { name: "twitter:image", content: hero },
@@ -82,7 +82,7 @@ function Home() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a href="tel:+254711856795" className="btn-honey">
-              <Phone className="h-4 w-4" /> Call +254 711 856 795
+              <Phone className="h-4 w-4" /> Call 0711856795
             </a>
             <Link to="/products" className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-7 py-[0.95rem] text-sm font-semibold text-cream transition-colors hover:bg-cream hover:text-charcoal">
               View Products <ArrowRight className="h-4 w-4" />
@@ -178,7 +178,7 @@ function Home() {
         <div className="hex-bg absolute inset-0 opacity-40" />
         <div className="container-luxe relative">
           <div className="reveal mx-auto max-w-2xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-honey-deep">Why Honeyfield</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-honey-deep">Why Ntarakwai pure & Natural Honey</span>
             <h2 className="font-display mt-3 text-4xl text-charcoal md:text-5xl">Quality you can taste</h2>
           </div>
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -211,7 +211,7 @@ function Home() {
             {[
               { q: "The most consistent honey supplier we have ever worked with. Quality has never wavered.", a: "Amina K.", r: "Hotel Procurement" },
               { q: "Beautiful packaging and an even more beautiful product. Our customers ask for it by name.", a: "James M.", r: "Supermarket Buyer" },
-              { q: "Honeyfield's propolis and pollen lifted our wellness range to a premium tier.", a: "Wanjiru L.", r: "Wellness Retailer" },
+              { q: "Ntarakwai pure & Natural Honey's propolis and pollen lifted our wellness range to a premium tier.", a: "Wanjiru L.", r: "Wellness Retailer" },
             ].map((t, i) => (
               <figure key={i} className="reveal rounded-3xl bg-card p-8 shadow-sm" style={{ transitionDelay: `${i * 80}ms` }}>
                 <Quote className="h-7 w-7 text-honey-deep/60" />
@@ -236,7 +236,7 @@ function Home() {
             <p className="mt-4 text-cream/80">Speak to our team for tailored wholesale pricing or retail orders.</p>
           </div>
           <a href="tel:+254711856795" className="btn-honey text-base">
-            <Phone className="h-5 w-5" /> Call +254 711 856 795
+            <Phone className="h-5 w-5" /> Call 0711856795
           </a>
         </div>
       </section>

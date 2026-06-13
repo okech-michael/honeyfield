@@ -11,7 +11,7 @@ export const Route = createFileRoute("/wholesale")({
     meta: [
       { title: "Wholesale Honey Supply — Retailers, Hotels & Distributors" },
       { name: "description", content: "Reliable bulk supply of premium honey and bee products for supermarkets, hotels, restaurants and distributors." },
-      { property: "og:title", content: "Honeyfield Wholesale" },
+      { property: "og:title", content: "Ntarakwai pure & Natural Honey Wholesale" },
       { property: "og:description", content: "Bulk premium honey supply across Kenya." },
       { property: "og:image", content: production },
     ],
@@ -31,7 +31,7 @@ function Wholesale() {
         title={<>Bulk supply with <em className="text-honey">unwavering quality</em>.</>}
         subtitle="Trusted partner to supermarkets, hotels, restaurants and distributors across East Africa."
       >
-        <a href="tel:+254711856795" className="btn-honey"><Phone className="h-4 w-4" /> +254 711 856 795</a>
+        <a href="tel:+254711856795" className="btn-honey"><Phone className="h-4 w-4" /> 0711856795</a>
       </PageHero>
 
       <section className="bg-background py-24">
@@ -94,7 +94,16 @@ function Wholesale() {
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
                 <a href="tel:+254711856795" className="btn-honey text-sm"><Phone className="h-4 w-4" /> Call sales</a>
-                <a href="https://wa.me/254711856795" target="_blank" rel="noreferrer" className="btn-outline-honey text-sm"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+                <a
+                  href={`https://wa.me/254711856795?text=${encodeURIComponent(
+                    "Hello Ntarakwai pure & Natural Honey, I would be glad to enquire about your honey products"
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-outline-honey text-sm"
+                >
+                  <MessageCircle className="h-4 w-4" /> WhatsApp
+                </a>
               </div>
             </div>
           </div>

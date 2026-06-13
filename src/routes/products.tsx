@@ -28,8 +28,8 @@ export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
       { title: "Products — Honey, Beeswax, Propolis & Pollen" },
-      { name: "description", content: "Browse Honeyfield's premium catalogue: pure honey, processed honey, beeswax, propolis, bee pollen and gift packs." },
-      { property: "og:title", content: "Honeyfield Products" },
+      { name: "description", content: "Browse Ntarakwai pure & Natural Honey's premium catalogue: pure honey, processed honey, beeswax, propolis, bee pollen and gift packs." },
+      { property: "og:title", content: "Ntarakwai pure & Natural Honey Products" },
       { property: "og:description", content: "Premium honey and bee product catalogue." },
       { property: "og:image", content: pPure },
     ],
@@ -41,7 +41,10 @@ function Products() {
   useReveal();
   const [cat, setCat] = useState<Cat>("All");
   const list = useMemo(() => PRODUCTS.filter((p) => cat === "All" || p.cat === cat), [cat]);
-  const waMsg = (t: string) => `https://wa.me/254711856795?text=${encodeURIComponent(`Hello Honeyfield, I'd like to enquire about ${t}.`)}`;
+  const waMsg = () =>
+    `https://wa.me/254711856795?text=${encodeURIComponent(
+      "Hello Ntarakwai pure & Natural Honey, I would be glad to enquire about your honey products"
+    )}`;
 
   return (
     <>

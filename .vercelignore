@@ -1,0 +1,10 @@
+node_modules
+.output
+build_log.txt
+live_html.txt
+components.json
+*.log
+*.lock
+.vscode
+.DS_Store
+*.tgz

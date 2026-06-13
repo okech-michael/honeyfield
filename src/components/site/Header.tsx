@@ -37,7 +37,7 @@ export function Header() {
             <HexIcon />
           </span>
           <span className="font-display truncate text-xl font-semibold tracking-tight text-charcoal">
-            Honeyfield
+            Ntarakwai pure & Natural Honey
             <span className="text-honey-deep">.</span>
           </span>
         </Link>
@@ -59,7 +59,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a href="tel:+254711856795" className="btn-honey text-sm">
             <Phone className="h-4 w-4" />
-            +254 711 856 795
+            0711856795
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export function Header() {
               ))}
               <a href="tel:+254711856795" className="btn-honey mt-3 text-sm">
                 <Phone className="h-4 w-4" />
-                Call +254 711 856 795
+                Call 0711856795
               </a>
             </nav>
           </div>
