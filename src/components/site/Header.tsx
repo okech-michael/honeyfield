@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -32,10 +33,14 @@ export function Header() {
       }`}
     >
       <div className="container-luxe grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 md:grid-cols-[auto_1fr_auto]">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gradient-to-br from-honey to-honey-deep text-charcoal shadow-md">
-            <HexIcon />
-          </span>
+        <Link to="/" className="flex min-w-0 items-center gap-3">
+          <img
+            src={logo}
+            alt="Ntarakwai logo"
+            className="h-11 w-11 rounded-full border border-border/30 bg-background object-contain p-1 shadow-md"
+            width={44}
+            height={44}
+          />
           <span className="font-display truncate text-xl font-semibold tracking-tight text-charcoal">
             Ntarakwai pure & Natural Honey
             <span className="text-honey-deep">.</span>
@@ -97,14 +102,5 @@ export function Header() {
         </div>
       )}
     </header>
-  );
-}
-
-function HexIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <path d="M12 2 L21 7 V17 L12 22 L3 17 V7 Z" />
-      <path d="M12 8 L17 10.5 V15.5 L12 18 L7 15.5 V10.5 Z" />
-    </svg>
   );
 }

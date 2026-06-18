@@ -1,15 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-charcoal text-cream">
       <div className="container-luxe grid gap-12 py-16 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-honey to-honey-deep text-charcoal">
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2 L21 7 V17 L12 22 L3 17 V7 Z"/></svg>
-            </span>
+          <div className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="Ntarakwai logo"
+              className="h-12 w-12 rounded-full border border-border/30 bg-background object-contain p-1 shadow-md"
+              width={48}
+              height={48}
+            />
             <span className="font-display text-2xl">Ntarakwai pure & Natural Honey<span className="text-honey">.</span></span>
           </div>
           <p className="mt-4 text-sm text-cream/70 leading-relaxed">
