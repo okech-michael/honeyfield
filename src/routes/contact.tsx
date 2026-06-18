@@ -64,11 +64,12 @@ function Contact() {
             <div className="overflow-hidden rounded-3xl border border-border bg-card">
               <iframe
                 title="Ntarakwai pure & Natural Honey location"
-                src="https://www.google.com/maps?q=Mt.+Kulal&output=embed"
+                src="https://www.google.com/maps?q=Mount+Kulal&z=12&output=embed&t=m"
                 className="h-64 w-full"
                 loading="lazy"
+                allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-              />
+              ></iframe>
             </div>
           </div>
 
